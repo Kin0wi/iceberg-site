@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Husam Buzdağı</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0b132b;
+      font-family: "Poppins", sans-serif;
+      color: white;
+      min-height: 100vh;
+    }
+
+    .container {
+      position: relative;
+      width: 800px;
+      max-width: 90%;
+      margin: 30px auto; /* sayfanın üstten boşluk bırakması için */
+    }
+
+    .iceberg {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    }
+
+    .label {
+      position: absolute;
+      font-weight: bold;
+      text-decoration: none;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      outline: none;
+    }
+
+    .label:hover {
+      transform: scale(1.1);
+      text-shadow: 0 0 10px black;
+    }
+
+    .label:focus {
+      outline: none;
+      text-decoration: none;
+    }
+
+    /* 🎨 Katman renkleri */
+    .layer1 { color: #ffffff; }
+    .layer2 { color: #f0cccc; }
+    .layer3 { color: #ffaaaa; }
+    .layer4 { color: #ff7777; }
+    .layer5 { color: #ff4444; }
+    .layer6 { color: #cc0000; }
+    .layer7 { color: #990000; }
+
+    /* 🧊 Footer sayfanın en altında */
+    footer {
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 14px;
+      color: #aaa;
+      background: rgba(0, 0, 0, 0.2);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 50px; /* içerikten footer’a boşluk */
+    }
+
+    footer span {
+      color: #00ffff;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="iceberg.png" alt="Buzdağı" class="iceberg" />
+
+    <!-- Katman yazıları -->
+    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" class="label layer1" style="top: 5%; left: 4%;">Basur Badur</a>
+    <a href="https://youtu.be/dkPBeRt-uxo" target="_blank" class="label layer2" style="top: 15%; left: 4%;">Paltalk Sövüş</a>
+    <a href="https://youtu.be/Uzu-7o9RxmI?si=G-SjUpkB4b_ZWoZP" target="_blank" class="label layer2" style="top: 15%; left: 20%;">Elo Kasan Çinli</a>
+    <a href="https://youtu.be/bSVVjA2Sn64" target="_blank" class="label layer3" style="top: 29%; left: 4%;">İsrail Askeri Kadın</a>
+    <a href="https://youtu.be/FZkVLr_2ozU?si=Nchq5LOGS6R0oGJW" target="_blank" class="label layer3" style="top: 29%; left: 25%;">Hüsamın Evi Taranıyor</a>
+    <a href="https://youtu.be/H9YN6KN1_O4?si=HagGAklhBn_K4lJF" target="_blank" class="label layer4" style="top: 45%; left: 4%;">Elo Kasan Çinli FINAL BOSS</a>
+    <a href="https://youtu.be/PH2YrxUN6Ow" class="label layer5" target="_blank" style="top: 59%; left: 4%;">Bade Bade</a>
+    <a href="https://youtu.be/TU5j43IjR9U?si=wMMHuGMj1zLoQG-A" target="_blank" class="label layer6" style="top: 74%; left: 4%;">Omegle İtalya</a>
+    <a href="https://youtu.be/D3O0uWMhRZA?si=55vYvIQDJ7HOfOd2" target="_blank" class="label layer7" style="top: 87%; left: 20%;">Cinci Dayı</a>
+    <a href="https://youtu.be/U6o4494owkc" target="_blank" class="label layer7" style="top: 87%; left: 4%;">Tepecikli Ayşe</a>
+  </div>
+
+  <!-- 👇 Footer -->
+  <footer>
+    Made by <span>Kinowi and Domuz</span> 
+  </footer>
+</body>
+</html>
