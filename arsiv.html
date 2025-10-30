@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hüsam Arşiv</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-color: #ff9c05;
+      font-family: "Poppins", sans-serif;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .container {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      margin: 30px auto;
+    }
+
+    .background-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      filter: drop-shadow(0 0 20px #2e3602);
+    }
+
+    .label {
+      position: absolute;
+      font-weight: bold;
+      text-decoration: none;
+      color: #ffffff;
+      text-shadow: 0 0 5px rgba(0,0,0,0.8);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .label:hover {
+      transform: scale(1.1);
+      text-shadow: 0 0 10px black;
+      color: #ff8800;
+    }
+
+    .home-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+      z-index: 1000;
+      transition: transform 0.2s ease;
+    }
+    .home-button:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      padding: 12px 0;
+      font-size: 14px;
+      color: #aaa;
+      background: rgba(0,0,0,0.3);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 50px;
+    }
+    footer span {
+      color: #e28841;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .label { font-size: 14px; }
+      .home-button { width: 50px; height: 50px; }
+    }
+    @media (max-width: 480px) {
+      .label { font-size: 12px; }
+      .home-button { width: 40px; height: 40px; }
+    }
+
+    /* 🌑 Geçiş animasyonu */
+    .transition-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 9999;
+      transition: opacity 0.7s ease;
+    }
+
+    .transition-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html" id="goHome">
+    <img src="back-icon.png" alt="Ana Sayfa" class="home-button">
+  </a>
+
+  <div class="container">
+    <img src="folder.png" alt="Arşiv arka plan" class="background-img">
+
+    <a href="https://youtu.be/UpagdKksMn4" target="_blank" class="label" style="top: 11%; left: 16%;">Yakup Tv Ban Anı</a>
+    <a href="https://youtu.be/dZjmxPmnTqA" target="_blank" class="label" style="top: 11%; left: 62%;">Dındıgınız Tazedir?</a>
+    <a href="https://youtu.be/cHbCoygXEQg" target="_blank" class="label" style="top: 24%; left: 16%;">Husam Osuruyor İfşa</a>
+    <a href="https://youtu.be/L5BhBB72Kt0" target="_blank" class="label" style="top: 24%; left: 62%;">aşkımçokpardon</a>
+    <a href="https://youtu.be/Eyr5H-SHkNU" target="_blank" class="label" style="top: 37%; left: 16%;">Kırıldı Karyola</a>
+    <a href="https://youtu.be/_nZT_WLUFuo" target="_blank" class="label" style="top: 37%; left: 62%;">Husamı Sal</a>
+  </div>
+
+  <footer>
+    © 2025 Hüsam Arşiv • Made by <span>Kinowi & Domuz</span>
+  </footer>
+
+  <!-- 🌑 Geçiş efekti -->
+  <div class="transition-overlay"></div>
+
+  <script>
+    const homeButton = document.getElementById('goHome');
+    const overlay = document.querySelector('.transition-overlay');
+
+    homeButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      overlay.classList.add('active');
+      setTimeout(() => {
+        window.location.href = homeButton.href;
+      }, 700);
+    });
+  </script>
+
+</body>
+</html>
