@@ -90,6 +90,41 @@
       font-weight: 600;
     }
 
+    /* 📁 Arşiv simgesi */
+    .archive-icon {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      z-index: 10;
+    }
+
+    .archive-icon:hover {
+      transform: scale(1.1);
+    }
+
+    /* 🌑 Geçiş animasyonu */
+    .transition-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 9999;
+      transition: opacity 0.7s ease;
+    }
+
+    .transition-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
     @media (max-width: 768px) {
   .label {
     font-size: 12px; /* mobilde yazılar küçülür */
@@ -125,6 +160,11 @@
   <div class="container">
     <img src="iceberg.png" alt="Buzdağı" class="iceberg" />
 
+    <!-- 📁 Arşiv simgesi -->
+    <a href="arsiv.html" id="goArchive">
+      <img src="archive.png" alt="Arşiv" class="archive-icon">
+    </a>
+
     <!-- Katman yazıları -->
     <a href="https://youtu.be/Z8veEs5rWBw?si=PLRB0yga6zafHmHR" target="_blank" class="label layer1" style="top: 5%; left: 53%;">Basur Badur</a>
     <a href="https://youtu.be/dkPBeRt-uxo" target="_blank" class="label layer2" style="top: 16%; left: 5%;">Paltalk Sövüş</a>
@@ -150,9 +190,25 @@
   <footer>
     Made by <span>Kinowi and Domuz</span> 
   </footer>
+
+  <!-- 🌑 Geçiş efekti -->
+  <div class="transition-overlay"></div>
+
+  <script>
+    const archiveButton = document.getElementById('goArchive');
+    const overlay = document.querySelector('.transition-overlay');
+
+    archiveButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      overlay.classList.add('active');
+      setTimeout(() => {
+        window.location.href = archiveButton.href;
+      }, 700);
+    });
 </body>
 
 </html>
+
 
 
 
