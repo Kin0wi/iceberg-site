@@ -106,6 +106,24 @@
       transform: scale(1.1);
     }
 
+    /* 🃏 Joker ikon */
+    .joker-icon{
+      width:60px;
+      height:auto;
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      cursor:pointer;
+      transition:opacity .25s ease, transform .25s ease;
+      opacity:0;
+      z-index:9999;
+    }
+   
+    .joker-icon:hover{
+      opacity:1;
+      transform:scale(1.12);
+    }
+
     /* 🌑 Geçiş animasyonu */
     .transition-overlay {
       position: fixed;
@@ -186,6 +204,10 @@
     <a href="https://youtu.be/U6o4494owkc" target="_blank" class="label layer7" style="top: 91%; left: 13%;">Tepecikli Ayşe</a>
   </div>
 
+  <a href="joker.html" id="goJoker">
+  <img src="Joker.png" alt="Joker" class="joker-icon">
+</a>
+
   <!-- 👇 Footer -->
   <footer>
     Made by <span>Kinowi & Domuz</span> 
@@ -209,6 +231,7 @@
 </body>
 
 </html>
+
 
 
 
