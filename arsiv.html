@@ -20,6 +20,24 @@
       overflow-y: auto;
     }
 
+    .farewell-banner {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      text-align: center;
+      padding: 10px 15px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      position: relative;
+      z-index: 1001;
+      backdrop-filter: blur(4px);
+    }
+    .farewell-banner span {
+      color: #ff9c05;
+    }
+
     .container {
       position: relative;
       width: 90%;
@@ -53,7 +71,7 @@
 
     .home-button {
       position: fixed;
-      top: 20px;
+      top: 60px;
       left: 20px;
       width: 80px;
       height: 80px;
@@ -82,14 +100,13 @@
 
     @media (max-width: 768px) {
       .label { font-size: 14px; }
-      .home-button { width: 50px; height: 50px; }
+      .home-button { width: 50px; height: 50px; top: 55px; }
     }
     @media (max-width: 480px) {
       .label { font-size: 12px; }
-      .home-button { width: 40px; height: 40px; }
+      .home-button { width: 40px; height: 40px; top: 50px; }
     }
 
-    /* 🌑 Geçiş animasyonu */
     .transition-overlay {
       position: fixed;
       top: 0;
@@ -110,6 +127,10 @@
   </style>
 </head>
 <body>
+
+  <div class="farewell-banner">
+  <span>Her şey için teşekkürler</span>
+  </div>
 
   <a href="index.html" id="goHome">
     <img src="back-icon.png" alt="Ana Sayfa" class="home-button">
@@ -133,7 +154,6 @@
     © 2025 Hüsam Arşiv • Made by <span>Kinowi & Domuz</span>
   </footer>
 
-  <!-- 🌑 Geçiş efekti -->
   <div class="transition-overlay"></div>
 
   <script>
@@ -150,7 +170,4 @@
   </script>
 
 </body>
-
 </html>
-
-
