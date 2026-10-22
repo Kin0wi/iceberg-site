@@ -6,16 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Husam Buzdağı</title>
   <link rel="icon" type="image/png" href="favicon.png">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJXGM5FZ9B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GJXGM5FZ9B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GJXGM5FZ9B');
-</script>
+    gtag('config', 'G-GJXGM5FZ9B');
+  </script>
   <style>
     
     body {
@@ -26,11 +25,30 @@
       min-height: 100vh;
     }
 
+    .farewell-banner {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      text-align: center;
+      padding: 10px 15px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+      position: relative;
+      z-index: 1001;
+      backdrop-filter: blur(4px);
+      box-sizing: border-box;
+    }
+    .farewell-banner span {
+      color: #00ffff;
+    }
+
     .container {
       position: relative;
       width: 800px;
       max-width: 90%;
-      margin: 30px auto; /* sayfanın üstten boşluk bırakması için */
+      margin: 30px auto;
     }
 
     .iceberg {
@@ -51,7 +69,6 @@
       outline: none;
       font-size: 25px;
       text-align: center;
-     
     }
 
     .label:hover {
@@ -64,7 +81,6 @@
       text-decoration: none;
     }
 
-    /* 🎨 Katman renkleri */
     .layer1 { color: #ffffff; }
     .layer2 { color: #f0cccc; }
     .layer3 { color: #ffaaaa; }
@@ -73,7 +89,6 @@
     .layer6 { color: #cc0000; }
     .layer7 { color: #990000; }
 
-    /* 🧊 Footer sayfanın en altında */
     footer {
       width: 100%;
       text-align: center;
@@ -82,7 +97,7 @@
       color: #aaa;
       background: rgba(0, 0, 0, 0.2);
       border-top: 1px solid rgba(255, 255, 255, 0.1);
-      margin-top: 50px; /* içerikten footer’a boşluk */
+      margin-top: 50px;
     }
 
     footer span {
@@ -90,10 +105,9 @@
       font-weight: 600;
     }
 
-    /* 📁 Arşiv simgesi */
     .archive-icon {
       position: fixed;
-      top: 20px;
+      top: 60px; 
       right: 20px;
       width: 60px;
       height: 60px;
@@ -106,7 +120,6 @@
       transform: scale(1.1);
     }
 
-    /* 🃏 Joker ikon */
     .joker-icon{
       width:60px;
       height:auto;
@@ -124,7 +137,6 @@
       transform:scale(1.12);
     }
 
-    /* 🌑 Geçiş animasyonu */
     .transition-overlay {
       position: fixed;
       top: 0;
@@ -144,41 +156,39 @@
     }
 
     @media (max-width: 768px) {
-  .label {
-    font-size: 12px; /* mobilde yazılar küçülür */
-    transform: translate(-50%, -50%); /* ortalama için */
-  }
+      .archive-icon {
+        top: 52px;
+        width: 45px;
+        height: 45px;
+      }
+      .label {
+        font-size: 12px;
+        transform: none;
+      }
 
-  .container {
-    width: 100%;
-  }
-}
-    @media (max-width: 768px) {
-  .label {
-    font-size: 12px;
-    transform: none; /* artık ortalama uygulamıyoruz */
-  }
+      .layer1 { top: 6%; left: 8%; }
+      .layer2 { top: 15%; left: 10%; }
+      .layer3 { top: 28%; left: 10%; }
+      .layer4 { top: 43%; left: 8%; }
+      .layer5 { top: 57%; left: 8%; }
+      .layer6 { top: 72%; left: 10%; }
+      .layer7 { top: 85%; left: 12%; }
 
-  /* 📱 Mobil için özel pozisyon düzeltmeleri */
-  .layer1 { top: 6%; left: 8%; }
-  .layer2 { top: 15%; left: 10%; }
-  .layer3 { top: 28%; left: 10%; }
-  .layer4 { top: 43%; left: 8%; }
-  .layer5 { top: 57%; left: 8%; }
-  .layer6 { top: 72%; left: 10%; }
-  .layer7 { top: 85%; left: 12%; }
-
-  .container {
-    width: 100%;
-  }
-}
+      .container {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <div class="farewell-banner">
+  <span>Her şey için teşekkürler</span>
+  </div>
+
   <div class="container">
     <img src="iceberg.png" alt="Buzdağı" class="iceberg" />
 
-    <!-- 📁 Arşiv simgesi -->
     <a href="arsiv.html" id="goArchive">
       <img src="archive.png" alt="Arşiv" class="archive-icon">
     </a>
@@ -205,15 +215,13 @@
   </div>
 
   <a href="joker.html" id="goJoker">
-  <img src="joker.png" alt="Joker" class="joker-icon">
-</a>
+    <img src="joker.png" alt="Joker" class="joker-icon">
+  </a>
 
-  <!-- 👇 Footer -->
   <footer>
     Made by <span>Kinowi & Domuz</span> 
   </footer>
 
-  <!-- 🌑 Geçiş efekti -->
   <div class="transition-overlay"></div>
 
   <script>
@@ -231,21 +239,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
